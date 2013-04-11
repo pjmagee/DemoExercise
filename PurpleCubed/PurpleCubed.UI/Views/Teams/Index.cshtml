@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PurpleCubed.Domain.Entities.Team>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Teams</h2>
+
+<!-- Attention! -->
+<!-- Would be replaced by a View Model -->
+<!-- Attention! -->
+
+<p>
+    I want to @Html.ActionLink("create a new team", "Create")
+</p>
+
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Employees</th>
+        <th>Date Created</th>
+        <th></th>
+    </tr>
+   
+    @foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+        <td>@item.Employees.Count</td>
+        <td>@item.DateCreated.ToShortDateString()</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            
+            @if (!item.Employees.Any())
+            {
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            }
+            
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    Take me to the @Html.ActionLink("employees", "Index", "Employee")
+</p> 

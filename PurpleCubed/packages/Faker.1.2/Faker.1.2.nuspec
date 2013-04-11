@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Faker</id>
+    <version>1.2</version>
+    <title>Faker</title>
+    <authors>Kiran Makkapati</authors>
+    <owners>Kiran Makkapati</owners>
+    <licenseUrl>http://faker.codeplex.com/license</licenseUrl>
+    <projectUrl>http://faker.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple library for creating fake data</description>
+    <summary>Simple library for creating fake data</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>TestData FakeData</tags>
+    <references>
+      <reference file="Faker.dll" />
+    </references>
+  </metadata>
+</package>

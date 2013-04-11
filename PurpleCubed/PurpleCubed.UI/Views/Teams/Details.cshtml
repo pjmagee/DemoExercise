@@ -1,0 +1,50 @@
+﻿@model PurpleCubed.Domain.Entities.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Team</legend>
+    
+    <dl class="dl-horizontal">
+        
+        <dt>Id</dt>
+        <dd>@Html.DisplayFor(model => model.Id)</dd>
+
+        <dt>Name</dt>
+        <dd>@Html.DisplayFor(model => model.Name)</dd>
+        
+     
+        <dt>Date Created</dt>
+        <dd> @Html.DisplayFor(model => model.DateCreated)</dd>
+
+    </dl>
+
+    <table class="table table-bordered table-hover table-striped">
+        <caption>Employees in Team</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model.Employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.FirstName @employee.LastName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

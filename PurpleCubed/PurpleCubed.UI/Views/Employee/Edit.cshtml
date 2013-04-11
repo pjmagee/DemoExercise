@@ -1,0 +1,94 @@
+﻿@model PurpleCubed.Domain.Entities.Employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!-- Attention! -->
+<!-- Would be replaced by a View Model -->
+<!-- Attention! -->
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Employee</legend>
+        
+        @Html.HiddenFor(model => model.Id)
+
+       <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.FirstName, "First Name")
+            </div>
+            <div class="controls">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.LastName, "Last Name")
+            </div>
+            <div class="controls">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+        </div>
+          
+        <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Email, "Email")
+            </div>
+            <div class="controls">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.DateOfBirth, "Dob")
+            </div>
+            <div class="controls">
+                @Html.EditorFor(model => model.DateOfBirth)
+                @Html.ValidationMessageFor(model => model.DateOfBirth)
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Team)
+            </div>
+            <div class="controls">
+                @Html.DropDownListFor(model => model.TeamId, (SelectList)ViewBag.Teams, "Team")
+                @Html.ValidationMessageFor(model => model.TeamId)
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="Save Changes" class="btn btn-primary" />
+        </div>
+
+    </fieldset>
+}
+
+<p>
+    Take me to the @Html.ActionLink("employees", "Index", "Employee")
+</p> 
+
+
+@section scripts {
+    
+      <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#DateOfBirth').datepicker();
+
+        });
+
+    </script>
+}

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurpleCubed.Domain", "PurpledCubed.Domain\PurpleCubed.Domain.csproj", "{7E86B254-5725-4F47-B267-BE62437A9978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurpleCubed.Infrastructure", "PurpleCubed.Infrastructure\PurpleCubed.Infrastructure.csproj", "{FAA07994-9AC3-42AE-AEA9-3268AEDE5477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurpleCubed.DataAccess", "PurpleCubed.Services\PurpleCubed.DataAccess.csproj", "{CA18BF39-FA78-450C-A012-88A45C516703}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BD52FDB8-8D7A-4286-A67C-E50DEF32FCAF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurpleCubed.UI", "PurpleCubed.UI\PurpleCubed.UI.csproj", "{1E958E27-01D3-4EED-8D76-5738C174A4BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E86B254-5725-4F47-B267-BE62437A9978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E86B254-5725-4F47-B267-BE62437A9978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E86B254-5725-4F47-B267-BE62437A9978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E86B254-5725-4F47-B267-BE62437A9978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA07994-9AC3-42AE-AEA9-3268AEDE5477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA07994-9AC3-42AE-AEA9-3268AEDE5477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA07994-9AC3-42AE-AEA9-3268AEDE5477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA07994-9AC3-42AE-AEA9-3268AEDE5477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA18BF39-FA78-450C-A012-88A45C516703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA18BF39-FA78-450C-A012-88A45C516703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA18BF39-FA78-450C-A012-88A45C516703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA18BF39-FA78-450C-A012-88A45C516703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E958E27-01D3-4EED-8D76-5738C174A4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E958E27-01D3-4EED-8D76-5738C174A4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E958E27-01D3-4EED-8D76-5738C174A4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E958E27-01D3-4EED-8D76-5738C174A4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

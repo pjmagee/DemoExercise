@@ -1,0 +1,70 @@
+﻿@model PurpleCubed.Domain.Entities.Team
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Team</legend>
+        
+        <div class="control-group">
+            <div class="control-label">
+                 @Html.LabelFor(model => model.Name)
+            </div>
+            <div class="controls">
+                 @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <div class="control-label">
+                @Html.LabelFor(model => model.DateCreated, "Date Created")
+            </div>
+            <div class="controls">
+                @Html.EditorFor(model => model.DateCreated, new { @class = "date" })
+                @Html.ValidationMessageFor(model => model.DateCreated)
+            </div>
+        </div>
+
+       @* 
+        <div class="control-group">
+            <div class="control-label">
+                 Unallocated Employees
+            </div>
+            <div class="controls">
+                 @Html.ListBoxFor(team => team.Employees, (MultiSelectList)ViewBag.Employees)
+                @Html.ValidationMessageFor(model => model.Employees)
+            </div>
+        </div>*@
+        
+        <div class="form-actions">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var date = new Date().getDate();
+            $('#DateCreated').datepicker();
+            $('#DateCreated').datepicker("SetDate", date);
+
+        });
+
+    </script>
+}

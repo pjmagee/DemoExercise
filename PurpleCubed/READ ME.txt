@@ -1,0 +1,33 @@
+Technologies
+
+
+NHibernate - Preliminary, need to look into this more but the core setup is done with Ninject (would need looking over)
+Entity Framework - Working Implementation (simple, but works)
+
+Interfaces for DAL Abstraction in the Application to make UI Layer DAL Agnostic (low coupling etc)
+
+Demo of Possible ViewModels (didn't see much point doing it for a small project, but you can see what I mean)
+
+Ninject IoC Container Dependency Injection - Used to INjection my DAL Repository Implementations into my Controllers
+(Should really be in some kind of service layer, controllers aren't supposed to contain business logic etc)
+
+NBuilder - Used to actually build the list of test objects
+Faker - Used to create some test objects with Team Names
+Faker - USed to create some employee test objects
+
+Namespace: PurpleCubed.InfrastructureEntityFramework.ContextInitializer.cs (Used for Seeding DB) 
+NHibernate has something similar probably
+
+FluentValidation - An awesome validation framework designed for MVC, desined by Jeremy Skinner a top lad who works in Watford
+as a .NET developer and co-author of MVC 4 In Action published by Manning Publications.
+
+Things like emails must be unique when registering etc
+
+Namespace: PurpleCubed.UI.Validation.*.cs
+
+FluentValidation Ninject Extension - Used to Ninject Model Validator used with Client Side Validation
+
+Namespace: PurpleCubed.UI.App_Start.NinjectWebCommon.cs
+
+Tiny bit of jQuery datepicker
+Simple use of CSS Bootstrap (because design ain't my thing)
